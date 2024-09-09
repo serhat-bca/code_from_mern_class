@@ -18,6 +18,10 @@ const App = () => {
       <p>
         {episode3} {viewsEp3}
       </p>
+      <p>
+        Seinfeld Season 1, Total Number of Views{" "}
+        {viewsEp1 + viewsEp2 + viewsEp3}
+      </p>
     </div>
   );
 };
