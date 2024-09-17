@@ -30,6 +30,8 @@ const App = () => {
     <div>
       <h1>Employees</h1>
       <Employee name="John Doe" department="IT Support" hrly={27.45} />
+      <Employee name="Jack Doe" department="Finance" hrly={45} />
+      <Employee name="Jane Doe" department="Software Development" hrly={63} />
     </div>
   );
 };
