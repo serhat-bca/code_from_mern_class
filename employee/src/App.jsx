@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-const Employee = (props) => {
+const Employee = ({ name, department, hrly }) => {
   const weekly = () => {
-    return moneyFormat(props.hrly * 40);
+    return moneyFormat(hrly * 40);
   };
 
   const moneyFormat = (amount) => {
@@ -9,14 +9,14 @@ const Employee = (props) => {
   };
 
   const annual = () => {
-    return moneyFormat(props.hrly * 40 * 52);
+    return moneyFormat(hrly * 40 * 52);
   };
 
   return (
     <p>
-      {props.name} works at {props.department}.
+      {name} works at {department}.
       <br />
-      Hourly Rate: {props.hrly}
+      Hourly Rate: {hrly}
       <br />
       Weekly Rate: {weekly()}
       <br />
@@ -26,6 +26,19 @@ const Employee = (props) => {
 };
 
 const App = () => {
+  const employeeObj = {
+    name: "Kane",
+    department: "HR",
+    hrly: "57",
+  };
+
+  const { name, department, hrly } = employeeObj;
+
+  console.log("name", name, "department", department, "hourly rate", hrly);
+
+  // console.log("name", employeeObj.name);
+  // console.log("department", employeeObj.department);
+
   return (
     <div>
       <h1>Employees</h1>
