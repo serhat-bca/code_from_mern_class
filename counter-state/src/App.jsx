@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+  const [counter1, setCounter1] = useState(0);
   // javascript array destructuring
   const arr = [10, 20, 30, 40, 50, 60, 70];
   const [a, b, c, ...d] = arr;
@@ -26,6 +27,10 @@ const App = () => {
       <h1>Counter App</h1>
       <p>Counter: {counter}</p>
       <button onClick={increase}>Increase</button>
+      <p>Counter2: {counter1}</p>
+      <button onClick={() => setCounter1(counter1 + 1)}>
+        Increase Counter 2
+      </button>
     </div>
   );
 };
