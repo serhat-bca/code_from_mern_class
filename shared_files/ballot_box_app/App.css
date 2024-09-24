@@ -1,0 +1,35 @@
+body {
+  font-family: "Geologica", sans-serif;
+  color: #0953a5;
+}
+
+.party-image {
+  max-width: 100px;
+  height: auto;
+}
+
+.vote-button {
+  color: white;
+  background-color: #0953a5;
+  border: 3px solid #0953a5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 18px;
+  width: 100px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.vote-button:hover {
+  background-color: #c9201e;
+}
+.party {
+  text-align: center;
+}
+
+.party-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 700px;
+}
