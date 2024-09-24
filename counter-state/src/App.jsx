@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
+
+const DisplayCounter = ({ counter }) => <p>Counter: {counter}</p>;
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -25,8 +28,10 @@ const App = () => {
   return (
     <div>
       <h1>Counter App</h1>
-      <p>Counter: {counter}</p>
+      <DisplayCounter counter={counter} />
       <button onClick={increase}>Increase</button>
+      <button onClick={() => setCounter(counter - 1)}>Decrease</button>
+      <button onClick={() => setCounter(0)}>Reset the counter</button>
       <p>Counter2: {counter1}</p>
       <button onClick={() => setCounter1(counter1 + 1)}>
         Increase Counter 2
