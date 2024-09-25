@@ -36,11 +36,13 @@ const App = () => {
       <button onClick={recommend}>Recommend</button> {recObj.rec}
       <br />
       <button onClick={notRecommend}>Not Recommend</button> {recObj.notRec}
-      <p>
-        Track of Recommendations:
-        <br />
-        <DisplayTrack track={track} />
-      </p>
+      {track.length !== 0 && (
+        <p>
+          Track of Recommendations:
+          <br />
+          <DisplayTrack track={track} />
+        </p>
+      )}
     </div>
   );
 };
